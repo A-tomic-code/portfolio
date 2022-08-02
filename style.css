@@ -328,7 +328,7 @@ button:active {
   gap: 10%;
 
   width: 50%;
-  height: 70%;
+  height: 100%;
 }
 
 /* PROYECTOS */
@@ -404,7 +404,7 @@ button:active {
 }
 
 
-/* FORM */
+/* FORM ELEMENTS */
 
 .form__element {
   width: 100%;
@@ -436,7 +436,7 @@ button:active {
 }
 
 .textarea {
-  height: fit-content;
+  height: 100%;
 }
 
 .form__buttons {
