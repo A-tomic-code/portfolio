@@ -24,7 +24,7 @@
 
   --footer-font-size: 200%;
   --footer-font-size-medium: 100%;
-  --footer-font-size-small:50%;
+  --footer-font-size-small: 50%;
 
   --card_proyect--font-size-title: 200%;
   --card_proyect--font-size-subtitle: 100%;
@@ -41,14 +41,13 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr 0.1fr;
   justify-content: space-between;
 
   width: 100vw;
-  height: 100vh;
-
-  overflow-x: scroll;
+  min-height: 100vh;
 
   background-image: url(img/fondo.svg);
 }
@@ -117,10 +116,11 @@
   justify-content: space-around;
   align-items: center;
 
-  width: 100%;
-  height: 70%;
-}
+  overflow: scroll;
 
+  width: 100%;
+  padding: 2%;
+}
 .page__title {
   display: flex;
   flex-direction: row;
@@ -180,7 +180,7 @@
   height: 100%;
 }
 .footer img {
-  height: 90%;
+  width: 20%;
 }
 
 /* ELEMENTS */
@@ -360,6 +360,14 @@ button:active {
 
   box-shadow: 0px 0px 15px var(--primary-color);
 }
+.card_proyect__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
 
 .card_proyect__pic {
   width: 100%;
@@ -407,7 +415,7 @@ button:active {
   height: 100%;
 }
 .card_proyect__link img {
-  height: 100%;
+  width: 20%;
 }
 
 /* FORM ELEMENTS */
@@ -486,15 +494,17 @@ button:active {
 
 @media screen and (max-width: 480px) {
   .header {
-     gap:10%;
-    
-    padding: 5%;
-    
-    font-size: var(--header-font-size-small)
-    
-  }
+    gap: 10%;
 
-  .footer { 
+    padding: 5%;
+
+    font-size: var(--header-font-size-small);
+  }
+  .page{
+    padding-top: 10%;
+  }
+  .footer {
+    margin-top:10%;
     font-size: calc(var(--footer-font-size-medium));
   }
 
@@ -504,27 +514,31 @@ button:active {
     justify-content: space-around;
   }
 
-  
+  .cards_container--proyect {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom:5%;
+  }
   .card_proyect {
     width: 80%;
-  }.card_proyect__pic {
-  padding: 3%;
-}
+    padding:5%
+  }
+  .card_proyect__pic {
+    padding: 3%;
+  }
 
-
-  .divider{
+  .divider {
     height: 5%;
   }
 }
 
 @media screen and (max-width: 350px) {
   .header {
-    
-    font-size: var(--header-font-size-small)
-    
+    font-size: var(--header-font-size-small);
   }
 
-  .footer { 
+  .footer {
     font-size: calc(var(--footer-font-size-medium));
   }
 
@@ -534,15 +548,14 @@ button:active {
     justify-content: space-around;
   }
 
-  
   .card_proyect {
     width: 70%;
-  }.card_proyect__pic {
-  padding: 3%;
-}
+  }
+  .card_proyect__pic {
+    padding: 3%;
+  }
 
-
-  .divider{
+  .divider {
     height: 5%;
   }
 }
