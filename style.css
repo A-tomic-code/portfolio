@@ -479,6 +479,7 @@ button:active {
 }
 @media screen and (max-width: 900px) {
   .card_proyect {
+    height: 70%;
     width: 45%;
   }
 }
@@ -489,7 +490,7 @@ button:active {
     
     padding: 5%;
     
-    font-size: var(--header-font-size-medium)
+    font-size: var(--header-font-size-small)
     
   }
 
@@ -516,7 +517,7 @@ button:active {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .header {
     
     font-size: var(--header-font-size-small)
