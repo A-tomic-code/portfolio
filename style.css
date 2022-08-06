@@ -397,12 +397,10 @@ button:active {
 }
 
 .card_proyect__content--title {
-  width: 100%;
   height: 50%;
   font-size: var(--card_proyect--font-size-title);
 }
 .card_proyect__content--subtitle {
-  width: 100%;
   height: 35%;
   font-size: var(--card_proyect--font-size-subtitle);
 }
@@ -525,8 +523,12 @@ button:active {
   .card_proyect {
     width: 80%;
     padding:5%
-  }
-  .card_proyect__pic {
+  }.card_proyect__content {
+    padding: 3%;
+  }.card_proyect__content--subtitle {
+    height: auto;
+    padding: 3%;
+  }.card_proyect__content--title {
     padding: 3%;
   }
 
