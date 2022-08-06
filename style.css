@@ -486,17 +486,29 @@ button:active {
   }
 }
 @media screen and (max-width: 900px) {
+  
+  .header{
+    z-index: 1;
+  }
   .aside{
     position:absolute;
     width: 100%;
 
+    z-index: 0;
+
     filter:blur(7px)
 
+  }.aside__aboutme{
+    display:none;
   }
 
   .page__info{
     position: relative;
-     width: 100%;
+    
+    width: 100%;
+
+    padding: 5%;
+    
   }
   .card_proyect {
     height: 70%;
