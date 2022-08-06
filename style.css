@@ -486,6 +486,18 @@ button:active {
   }
 }
 @media screen and (max-width: 900px) {
+  .aside{
+    position:absolute;
+    width: 100%;
+
+    filter:blur(7px)
+
+  }
+
+  .page__info{
+    position: relative;
+     width: 100%;
+  }
   .card_proyect {
     height: 70%;
     width: 45%;
@@ -530,6 +542,10 @@ button:active {
     padding: 3%;
   }.card_proyect__content--title {
     padding: 3%;
+  }
+
+  .page__info{
+    font-size: 150%;
   }
 
   .divider {
