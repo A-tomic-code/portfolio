@@ -211,7 +211,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 
-  width: 20%;
+  min-width: 20%;
   height: 40%;
 
   border-top: 10px double rgba(255, 0, 255, 0.315);
@@ -369,6 +369,7 @@ button:active {
   border-radius: 5%;
 
   padding: 1%;
+  padding-bottom: 2%;
 
   /* background-color: var(--box-background-color); */
 
@@ -496,7 +497,6 @@ button:active {
     width: 30%;
   }
   .card__content {
-    flex-wrap: wrap;
 
     filter: drop-shadow(10px 10px 5px var(--secondary-color-translucid))
       drop-shadow(-10px 10px 5px var(--primary-color-translucid));
@@ -518,7 +518,9 @@ button:active {
   .aside__aboutme {
     display: none;
   }
-
+    .page {
+    padding: 5%;
+  }
   .page__info {
     position: relative;
 
@@ -546,7 +548,7 @@ button:active {
     padding: 2%;
   }
   .card__content {
-    height: auto;
+    justify-content: space-between;
   }
   .card img {
     padding: 5%;
@@ -554,7 +556,6 @@ button:active {
     width: 40%;
   }
   .card_proyect {
-    /* ---------------------------------------------- */
     height: 70%;
     width: 45%;
   }
@@ -670,4 +671,25 @@ button:active {
     height: 5%;
   }
 
+}
+@media screen and (max-height: 600px){
+  .card__content{
+    justify-content: center;
+  }
+  .card__content_img{
+    display:none;
+  }
+  .card_proyect img{
+    height: 95%;
+  }
+
+
+  /* **** AQUI ESTA EL PROBLEMA ***** */
+  /* **** SI ENSANCHO LA TARJETA ***** */
+  /* **** SE MONTA AL HEADER ***** */
+
+  .card_proyect{
+    min-width: 90%;
+    height: 120%;
+  }
 }
